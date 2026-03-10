@@ -38,7 +38,7 @@
             // 
             btnRefill.Location = new Point(25, 12);
             btnRefill.Name = "btnRefill";
-            btnRefill.Size = new Size(210, 23);
+            btnRefill.Size = new Size(316, 23);
             btnRefill.TabIndex = 0;
             btnRefill.Text = "Перезаполнить";
             btnRefill.UseVisualStyleBackColor = true;
@@ -50,7 +50,7 @@
             txtInfo.Location = new Point(25, 51);
             txtInfo.Name = "txtInfo";
             txtInfo.ReadOnly = true;
-            txtInfo.Size = new Size(210, 69);
+            txtInfo.Size = new Size(316, 69);
             txtInfo.TabIndex = 1;
             txtInfo.Text = "";
             // 
@@ -58,13 +58,13 @@
             // 
             txtOut.Location = new Point(25, 126);
             txtOut.Name = "txtOut";
-            txtOut.Size = new Size(100, 96);
+            txtOut.Size = new Size(206, 96);
             txtOut.TabIndex = 2;
             txtOut.Text = "";
             // 
             // btnGet
             // 
-            btnGet.Location = new Point(131, 126);
+            btnGet.Location = new Point(237, 126);
             btnGet.Name = "btnGet";
             btnGet.Size = new Size(104, 96);
             btnGet.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(250, 244);
+            ClientSize = new Size(346, 236);
             Controls.Add(btnGet);
             Controls.Add(txtOut);
             Controls.Add(txtInfo);

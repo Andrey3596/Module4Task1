@@ -26,7 +26,7 @@ namespace task1
         public override String GetInfo()
         {
             var str = "Я Фильм";
-            str += String.Format("\nХронометраж{0}\nКол.Наград{1}", this.Timekeeping, this.NumberAwards);
+            str += String.Format("\nХронометраж {0}\nКол.Наград {1}", this.Timekeeping, this.NumberAwards);
             return str;
         }
     }
@@ -39,7 +39,7 @@ namespace task1
         public override String GetInfo()
         {
             var str = "Я Cериал";
-            str += String.Format("\nКол.Серий{0}\nКол.Сезонов{1}", this.BonesNumber, this.NumberSeasons);
+            str += String.Format("\nКол.Серий {0}\nКол.Сезонов {1}", this.BonesNumber, this.NumberSeasons);
             return str;
         }
     }
@@ -52,7 +52,7 @@ namespace task1
         public override String GetInfo()
         {
             var str = "Я ТВ передача";
-            str += String.Format("\nПродолжительность{0}\nЭфирное время{1}", this.Duration, this.AirTime);
+            str += String.Format("\nПродолжительность {0}\nЭфирное время {1}", this.Duration, this.AirTime);
             return str;
         }
     }

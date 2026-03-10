@@ -77,24 +77,12 @@ namespace task1
             }
 
             // взяли первый фрукт
-            var fruit = this.filmList[0];
+            var film = this.filmList[0];
             // тут вам не реальность, взятие это на самом деле создание указателя на область в памяти
             // где хранится экземпляр класса, так что если хочешь удалить, делай это сам
             this.filmList.RemoveAt(0);
 
-            // ну а теперь предложим покупателю его фрукт
-            if (fruit is Movie)
-            {
-                txtOut.Text = "Фильм";
-            }
-            else if (fruit is Series)
-            {
-                txtOut.Text = "Сериал";
-            }
-            else if (fruit is Telecast)
-            {
-                txtOut.Text = "Передача";
-            }
+            txtOut.Text = film.GetInfo();
 
             // обновим информацию о количестве товара на форме
             ShowInfo();

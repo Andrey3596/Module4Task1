@@ -11,9 +11,12 @@ namespace task1
 
     public class Film
     {
+        public double Rating = 0;
         public virtual String GetInfo()
         {
-            return "Я Кино";
+           
+            var str = String.Format("\nРейтинг {0}", this.Rating);
+            return str;
         }
     }
 
@@ -26,6 +29,7 @@ namespace task1
         public override String GetInfo()
         {
             var str = "Я Фильм";
+            str += base.GetInfo();
             str += String.Format("\nХронометраж {0}\nКол.Наград {1}", this.Timekeeping, this.NumberAwards);
             return str;
         }
@@ -39,6 +43,7 @@ namespace task1
         public override String GetInfo()
         {
             var str = "Я Cериал";
+            str += base.GetInfo();
             str += String.Format("\nКол.Серий {0}\nКол.Сезонов {1}", this.BonesNumber, this.NumberSeasons);
             return str;
         }
@@ -52,6 +57,7 @@ namespace task1
         public override String GetInfo()
         {
             var str = "Я ТВ передача";
+            str += base.GetInfo();
             str += String.Format("\nПродолжительность {0}\nЭфирное время {1}", this.Duration, this.AirTime);
             return str;
         }

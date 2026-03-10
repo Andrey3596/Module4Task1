@@ -7,17 +7,31 @@ namespace task1
         public Form1()
         {
             InitializeComponent();
+            ShowInfo();
         }
 
         private void btnRefill_Click(object sender, EventArgs e)
         {
             this.filmList.Clear();
+            var rnd = new Random();
+
             for (var i = 0; i < 10; ++i)
             {
-                // классно да, список типа Fruit, а кладем Mandarin
-                // вот она: "сила наследования"
-                this.filmList.Add(new Movie());
+                switch (rnd.Next() % 3) // генерирую случайное число от 0 до 2 (ну остаток от деления на 3)
+                {
+                    case 0: // если 0, то мандарин
+                        this.filmList.Add(new Movie());
+                        break;
+                    case 1: // если 1 то виноград
+                        this.filmList.Add(new Series());
+                        break;
+                    case 2: // если 2 то арбуз
+                        this.filmList.Add(new Telecast());
+                        break;
+                        // появление других чисел маловероятно
+                }
             }
+            ShowInfo();
         }
 
         private void ShowInfo()
@@ -49,9 +63,9 @@ namespace task1
             }
 
             // а ну и вывести все это надо на форму
-            txtInfo.Text = "фильмы\tсериалы\tтв"; // буквы экнмлю, чтобы влезло на форму
+            txtInfo.Text = "Фильм\tСриал\tПрдач"; // буквы экнмлю, чтобы влезло на форму
             txtInfo.Text += "\n";
-            txtInfo.Text += String.Format("{0}\t{1}\t{2}", mandarinsCount, grapesCount, watermellonsCount);
+            txtInfo.Text += String.Format("{0}\t{1}\t{2}", movieCount, seriesCount, telecastCount);
         }
 
     }

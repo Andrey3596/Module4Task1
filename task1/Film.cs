@@ -33,6 +33,17 @@ namespace task1
             str += String.Format("\nХронометраж {0}\nКол.Наград {1}", this.Timekeeping, this.NumberAwards);
             return str;
         }
+
+        public static Movie Generate()
+        {
+            var rnd = new Random();
+            return new Movie
+            {
+                Rating = rnd.Next() % 101,
+                Timekeeping = rnd.Next() % 101,
+                NumberAwards = rnd.Next() % 101
+            };
+        }
     }
 
     public class Series : Film
@@ -47,6 +58,17 @@ namespace task1
             str += String.Format("\nКол.Серий {0}\nКол.Сезонов {1}", this.BonesNumber, this.NumberSeasons);
             return str;
         }
+
+        public static Series Generate()
+        {
+            var rnd = new Random();
+            return new Series
+            {
+                Rating = rnd.Next() % 101,
+                NumberSeasons = rnd.Next() % 101,
+                BonesNumber = rnd.Next() % 101
+            };
+        }
     }
 
     public class Telecast : Film
@@ -60,6 +82,17 @@ namespace task1
             str += base.GetInfo();
             str += String.Format("\nПродолжительность {0}\nЭфирное время {1}", this.Duration, this.AirTime);
             return str;
+        }
+
+        public static Telecast Generate()
+        {
+            var rnd = new Random();
+            return new Telecast
+            {
+                Rating = rnd.Next() % 101,
+                Duration = rnd.Next() % 101,
+                AirTime = rnd.Next() % 101
+            };
         }
     }
 }

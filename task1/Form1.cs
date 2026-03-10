@@ -20,7 +20,8 @@ namespace task1
                 switch (rnd.Next() % 3) // генерирую случайное число от 0 до 2 (ну остаток от деления на 3)
                 {
                     case 0: // если 0, то мандарин
-                        this.filmList.Add(new Movie{ 
+                        this.filmList.Add(new Movie{
+                            Rating = rnd.Next() % 101,
                             Timekeeping = rnd.Next() % 101,
                             NumberAwards = rnd.Next() % 101 
                         });
@@ -28,6 +29,7 @@ namespace task1
                     case 1: // если 1 то виноград
                         this.filmList.Add(new Series
                         {
+                            Rating = rnd.Next() % 101,
                             NumberSeasons = rnd.Next() % 101,
                             BonesNumber = rnd.Next() % 101
                         });
@@ -35,6 +37,7 @@ namespace task1
                     case 2: // если 2 то арбуз
                         this.filmList.Add(new Telecast
                         {
+                            Rating = rnd.Next() % 101,
                             Duration = rnd.Next() % 101,
                             AirTime = rnd.Next() % 101
                         });

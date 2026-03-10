@@ -12,6 +12,7 @@ namespace task1
     public class Film
     {
         public double Rating = 0;
+        public static Random rnd = new Random();
         public virtual String GetInfo()
         {
            
@@ -36,7 +37,7 @@ namespace task1
 
         public static Movie Generate()
         {
-            var rnd = new Random();
+            
             return new Movie
             {
                 Rating = rnd.Next() % 101,
@@ -61,7 +62,7 @@ namespace task1
 
         public static Series Generate()
         {
-            var rnd = new Random();
+            
             return new Series
             {
                 Rating = rnd.Next() % 101,
@@ -86,7 +87,7 @@ namespace task1
 
         public static Telecast Generate()
         {
-            var rnd = new Random();
+            
             return new Telecast
             {
                 Rating = rnd.Next() % 101,

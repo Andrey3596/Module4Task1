@@ -15,7 +15,6 @@ namespace task1
         public static Random rnd = new Random();
         public virtual String GetInfo()
         {
-           
             var str = String.Format("\nРейтинг {0}", this.Rating);
             return str;
         }

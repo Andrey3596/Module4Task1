@@ -32,6 +32,7 @@
             txtInfo = new RichTextBox();
             txtOut = new RichTextBox();
             btnGet = new Button();
+            txtLine = new RichTextBox();
             SuspendLayout();
             // 
             // btnRefill
@@ -50,21 +51,21 @@
             txtInfo.Location = new Point(25, 51);
             txtInfo.Name = "txtInfo";
             txtInfo.ReadOnly = true;
-            txtInfo.Size = new Size(316, 69);
+            txtInfo.Size = new Size(155, 69);
             txtInfo.TabIndex = 1;
             txtInfo.Text = "";
             // 
             // txtOut
             // 
-            txtOut.Location = new Point(25, 126);
+            txtOut.Location = new Point(12, 495);
             txtOut.Name = "txtOut";
-            txtOut.Size = new Size(206, 96);
+            txtOut.Size = new Size(364, 96);
             txtOut.TabIndex = 2;
             txtOut.Text = "";
             // 
             // btnGet
             // 
-            btnGet.Location = new Point(237, 126);
+            btnGet.Location = new Point(382, 495);
             btnGet.Name = "btnGet";
             btnGet.Size = new Size(104, 96);
             btnGet.TabIndex = 3;
@@ -72,11 +73,21 @@
             btnGet.UseVisualStyleBackColor = true;
             btnGet.Click += btnGet_Click;
             // 
+            // txtLine
+            // 
+            txtLine.Location = new Point(186, 48);
+            txtLine.Name = "txtLine";
+            txtLine.Size = new Size(300, 441);
+            txtLine.TabIndex = 4;
+            txtLine.Text = "";
+            
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(346, 236);
+            ClientSize = new Size(498, 603);
+            Controls.Add(txtLine);
             Controls.Add(btnGet);
             Controls.Add(txtOut);
             Controls.Add(txtInfo);
@@ -92,5 +103,6 @@
         private RichTextBox txtInfo;
         private RichTextBox txtOut;
         private Button btnGet;
+        private RichTextBox txtLine;
     }
 }

@@ -1,3 +1,5 @@
+
+
 namespace task1
 {
     public partial class Form1 : Form
@@ -49,22 +51,27 @@ namespace task1
                 if (film is Movie)
                 {
                     movieCount += 1;
-                    line += film.GetInfo();
-                    line += "\n\n";
+                    
                 }
                 else if (film is Series)
                 {
                     seriesCount += 1;
-                    line += film.GetInfo();
-                    line += "\n\n";
+                    
                 }
                 else if (film is Telecast)
                 {
                     telecastCount += 1;
-                    line += film.GetInfo();
-                    line += "\n\n";
+                    
                 }
             }
+
+            this.filmList.Reverse();
+            foreach (var film in this.filmList)
+            {
+                line += film.GetInfo();
+                line += "\n\n";
+            }
+            this.filmList.Reverse();
 
 
             txtInfo.Text = "Фильм\tСриал\tПрдач";

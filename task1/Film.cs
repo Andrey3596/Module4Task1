@@ -15,7 +15,7 @@ namespace task1
         public static Random rnd = new Random();
         public virtual String GetInfo()
         {
-            var str = String.Format("\nРейтинг {0}", this.Rating);
+            var str = $"Рейтинг {this.Rating}\n";
             return str;
         }
     }
@@ -28,9 +28,9 @@ namespace task1
         
         public override String GetInfo()
         {
-            var str = "Я Фильм";
+            var str = "Я Фильм\n";
             str += base.GetInfo();
-            str += String.Format("\nХронометраж {0}\nКол.Наград {1}", this.Timekeeping, this.NumberAwards);
+            str += $"Хронометраж {this.Timekeeping}\nКол.Наград {this.NumberAwards}";
             return str;
         }
 
@@ -53,9 +53,9 @@ namespace task1
         
         public override String GetInfo()
         {
-            var str = "Я Cериал";
+            var str = "Я Cериал\n";
             str += base.GetInfo();
-            str += String.Format("\nКол.Серий {0}\nКол.Сезонов {1}", this.BonesNumber, this.NumberSeasons);
+            str += $"Кол.Серий {this.BonesNumber}\nКол.Сезонов {this.NumberSeasons}";
             return str;
         }
 
@@ -78,9 +78,9 @@ namespace task1
         
         public override String GetInfo()
         {
-            var str = "Я ТВ передача";
+            var str = "Я ТВ передача\n";
             str += base.GetInfo();
-            str += String.Format("\nПродолжительность {0}\nЭфирное время {1}", this.Duration, this.AirTime);
+            str += $"Продолжительность {this.Duration}\nЭфирное время {this.AirTime}";
             return str;
         }
 

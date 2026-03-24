@@ -17,7 +17,7 @@ namespace task1
             this.filmList.Clear();
             var rnd = new Random();
 
-            for (var i = 0; i < 10; ++i)
+            for (var i = 0; i < 5; ++i)
             {
                 switch (rnd.Next() % 3)
                 {
@@ -43,6 +43,7 @@ namespace task1
             int seriesCount = 0;
             int telecastCount = 0;
             string line = "";
+            this.filmList.Reverse();
 
             foreach (var film in this.filmList)
             {
@@ -51,32 +52,29 @@ namespace task1
                 if (film is Movie)
                 {
                     movieCount += 1;
-                    
+                    line += film.GetInfo();
+                    line += "\n\n";
                 }
                 else if (film is Series)
                 {
                     seriesCount += 1;
-                    
+                    line += film.GetInfo();
+                    line += "\n\n";
                 }
                 else if (film is Telecast)
                 {
                     telecastCount += 1;
-                    
+                    line += film.GetInfo();
+                    line += "\n\n";
                 }
             }
 
             this.filmList.Reverse();
-            foreach (var film in this.filmList)
-            {
-                line += film.GetInfo();
-                line += "\n\n";
-            }
-            this.filmList.Reverse();
 
 
-            txtInfo.Text = "Фильм\tСриал\tПрдач";
+            txtInfo.Text = "Фильм\t\tСериал\t\tПередача";
             txtInfo.Text += "\n";
-            txtInfo.Text += String.Format("{0}\t{1}\t{2}", movieCount, seriesCount, telecastCount);
+            txtInfo.Text += String.Format("{0}\t\t{1}\t\t{2}", movieCount, seriesCount, telecastCount);
             txtLine.Text = line;
         }
 

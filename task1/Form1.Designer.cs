@@ -51,7 +51,7 @@
             txtInfo.Location = new Point(25, 51);
             txtInfo.Name = "txtInfo";
             txtInfo.ReadOnly = true;
-            txtInfo.Size = new Size(155, 69);
+            txtInfo.Size = new Size(253, 69);
             txtInfo.TabIndex = 1;
             txtInfo.Text = "";
             // 
@@ -75,12 +75,11 @@
             // 
             // txtLine
             // 
-            txtLine.Location = new Point(186, 48);
+            txtLine.Location = new Point(284, 48);
             txtLine.Name = "txtLine";
-            txtLine.Size = new Size(300, 441);
+            txtLine.Size = new Size(202, 441);
             txtLine.TabIndex = 4;
             txtLine.Text = "";
-            
             // 
             // Form1
             // 
